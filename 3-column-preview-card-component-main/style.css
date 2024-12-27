@@ -1,4 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --lighter-color: hsl(0, 0%, 95%);
+  --orange-color: hsl(31, 77%, 52%);
+  --cyan-color: hsl(184, 100%, 22%);
+  --dark-cyan-color: hsl(179, 100%, 13%);
+  --light-color: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: red;
-  color: blue;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: var(--lighter-color);
+  font-weight: normal;
+  color: var(--light-color);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+main {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--lighter-color);
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+p {
+  font-size: 15px;
+  line-height: 165%;
+}
+
+button {
+  border: none;
+  outline: none;
+  font: inherit;
+  padding-block: 12px;
+  padding-inline: 32px;
+  border-radius: 100vw;
+  background: var(--lighter-color);
+}
+
+.car-info {
+  gap: 36px;
+  width: 100%;
+  padding: 48px;
+  display: flex;
+  max-width: 306px;
+  min-height: 500px;
+  position: relative;
+  flex-direction: column;
+}
+.car_info__cta {
+  position: absolute;
+  bottom: 48px;
+}
+
+.car_info__bio {
+  gap: 8px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.sedans-wrapper {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background: var(--orange-color);
+}
+
+.suvs-wrapper {
+  background: var(--cyan-color);
+}
+
+.luxury-wrapper {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: var(--dark-cyan-color);
+}
+
+.sedans-wrapper button {
+  color: var(--orange-color);
+}
+
+.suvs-wrapper button {
+  color: var(--cyan-color);
+}
+
+.luxury-wrapper button {
+  color: var(--dark-cyan-color);
 }

@@ -13,23 +13,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   display: flex;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: var(--lighter-color);
   font-weight: normal;
-  color: var(--light-color);
-  font-family: "Lexend Deca", sans-serif;
-}
-
-main {
-  display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
+  color: var(--light-color);
+  background: var(--lighter-color);
+  font-family: "Lexend Deca", sans-serif;
 }
 
 h1 {
@@ -39,20 +31,29 @@ h1 {
   color: var(--lighter-color);
   font-family: "Big Shoulders Display", sans-serif;
 }
-
 p {
   font-size: 15px;
   line-height: 165%;
 }
-
 button {
   border: none;
   outline: none;
   font: inherit;
+  cursor: pointer;
   padding-block: 12px;
   padding-inline: 32px;
   border-radius: 100vw;
+  border: 1px solid transparent;
   background: var(--lighter-color);
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 88px 24px;
+  justify-content: center;
 }
 
 .car-info {
@@ -60,47 +61,74 @@ button {
   width: 100%;
   padding: 48px;
   display: flex;
-  max-width: 306px;
-  min-height: 500px;
   position: relative;
   flex-direction: column;
 }
-.car_info__cta {
-  position: absolute;
-  bottom: 48px;
+.car_info__cta button:hover {
+  color: var(--lighter-color);
+  background-color: transparent;
+  border-color: var(--lighter-color);
 }
-
 .car_info__bio {
   gap: 8px;
   display: flex;
   position: relative;
   flex-direction: column;
 }
-
 .sedans-wrapper {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
   background: var(--orange-color);
 }
-
 .suvs-wrapper {
   background: var(--cyan-color);
 }
-
 .luxury-wrapper {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
   background: var(--dark-cyan-color);
 }
-
 .sedans-wrapper button {
   color: var(--orange-color);
 }
-
 .suvs-wrapper button {
   color: var(--cyan-color);
 }
-
 .luxury-wrapper button {
   color: var(--dark-cyan-color);
+}
+
+@media (max-width: 960px) {
+  main {
+    width: 100%;
+    flex-direction: column;
+  }
+  .sedans-wrapper {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .luxury-wrapper {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+@media (min-width: 576px) {
+  .car-info {
+    gap: 28px;
+    max-width: 306px;
+  }
+}
+
+@media (min-width: 960px) {
+  .car-info {
+    min-height: 500px;
+  }
+  .sedans-wrapper {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .luxury-wrapper {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .car_info__cta {
+    bottom: 48px;
+    position: absolute;
+  }
 }

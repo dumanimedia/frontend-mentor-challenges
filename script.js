@@ -1,5 +1,6 @@
 const projects = [
   { name: "3-column-preview-card-component-main", difficulty: 1 },
+  { name: "easybank-landing-page-master", difficulty: 3 },
 ];
 
 const list = document.getElementById("list");

@@ -46,10 +46,14 @@ h2 {
 h3 {
   font-size: 24px;
 }
+h4 {
+  font-size: 16px;
+}
 
 p {
   font-size: 18px;
   line-height: 160%;
+  letter-spacing: -2%;
 }
 p.font-sm {
   font-size: 16px;
@@ -57,25 +61,26 @@ p.font-sm {
 p.font-xs {
   font-size: 13px;
 }
+img {
+  max-width: 100%;
+}
 
 main {
   margin-block: 96px;
 }
 
 .section-wrapper {
-  padding-block: 108px;
+  gap: 71px;
+  display: flex;
   max-width: 1112px;
+  position: relative;
   margin-inline: auto;
-  /* padding-inline: 164px; */
+  padding-block: 108px;
+  flex-direction: column;
 }
 
 #why-choose-us {
   background: var(--light-grayish-blue-color);
-}
-#why-choose-us .section-wrapper {
-  gap: 71px;
-  display: flex;
-  flex-direction: column;
 }
 .why-choose-us__head {
   gap: 24px;
@@ -85,22 +90,62 @@ main {
   flex-direction: column;
 }
 .why-choose-us__choices {
-  gap: 32px;
+  gap: 20px;
   display: flex;
-  flex-wrap: wrap;
 }
 .choice {
   gap: 32px;
   width: 100%;
   display: flex;
-  max-width: 250px;
+  max-width: 280px;
   flex-direction: column;
 }
 
+.latest-articles__container {
+  gap: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.article {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+}
+.article__content {
+  gap: 12px;
+  padding: 28px;
+  display: flex;
+  padding: 28px;
+  flex-direction: column;
+}
+.article__img {
+  aspect-ratio: 51/40;
+  object-fit: cover;
+}
+.article__content-subtitle {
+  font-size: 10px;
+}
+.article__content-title {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.article__content-title:hover {
+  color: var(--lime-green-color);
+}
+.article__content-bio {
+  font-size: 13px;
+  line-height: 136%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @media (max-width: 1024px) {
-  .section-wrapper {
-    padding-inline: 16px;
-  }
   h2 {
     font-size: 36px;
   }
@@ -118,6 +163,9 @@ p.font-xs {
 } */
   .choice {
     gap: 24px;
+  }
+  .why-choose-us__choices {
+    flex-wrap: wrap;
   }
 }
 

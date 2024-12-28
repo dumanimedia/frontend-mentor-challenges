@@ -1,10 +1,95 @@
-:root {
-  --Dark-Blue: hsl(233, 26%, 24%);
-  --Lime-Green: hsl(136, 65%, 51%);
-  --Bright-Cyan: hsl(192, 70%, 51%);
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
 
-  --Grayish-Blue: hsl(233, 8%, 62%);
-  --Light-Grayish-Blue: hsl(220, 16%, 96%);
-  --Very-Light-Gray: hsl(0, 0%, 98%);
-  --White: hsl(0, 0%, 100%);
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --dark-blue-color: hsl(233, 26%, 24%);
+  --lime-green-color: hsl(136, 65%, 51%);
+  --bright-cyan-color: hsl(192, 70%, 51%);
+  --grayish-blue-color: hsl(233, 8%, 62%);
+  --very-light-gray-color: hsl(0, 0%, 98%);
+  --light-grayish-blue-color: hsl(220, 16%, 96%);
+  --lime-cyan-gradient: linear-gradient(
+    90deg,
+    var(--lime-green-color) 0%,
+    var(--bright-cyan-color) 100%
+  );
+
+  --font-family: "Public Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--grayish-blue-color);
+  background-color: var(--very-light-gray-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: -2%;
+  color: var(--dark-blue-color);
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 160%;
+}
+p.font-sm {
+  font-size: 16px;
+}
+p.font-xs {
+  font-size: 13px;
+}
+
+main {
+  margin-block: 96px;
+}
+
+.section-wrapper {
+  padding-block: 108px;
+  max-width: 1112px;
+  margin-inline: auto;
+  /* padding-inline: 164px; */
+}
+
+#why-choose-us {
+  background: var(--light-grayish-blue-color);
+}
+#why-choose-us .section-wrapper {
+  gap: 71px;
+  display: flex;
+  flex-direction: column;
+}
+.why-choose-us__head {
+  gap: 24px;
+  width: 100%;
+  display: flex;
+  max-width: 640px;
+  flex-direction: column;
+}
+.why-choose-us__choices {
+  gap: 32px;
+  display: flex;
+}
+.choice {
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
 }

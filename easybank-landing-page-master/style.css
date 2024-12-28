@@ -35,7 +35,7 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 100%;
+  line-height: 115%;
   font-weight: 400;
   letter-spacing: -2%;
   color: var(--dark-blue-color);
@@ -87,9 +87,47 @@ main {
 .why-choose-us__choices {
   gap: 32px;
   display: flex;
+  flex-wrap: wrap;
 }
 .choice {
   gap: 32px;
+  width: 100%;
   display: flex;
+  max-width: 250px;
   flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .section-wrapper {
+    padding-inline: 16px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+  /* p.font-sm {
+  font-size: 16px;
+}
+p.font-xs {
+  font-size: 13px;
+} */
+  .choice {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  #why-choose-us {
+    text-align: center;
+  }
+  .choice {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
 }

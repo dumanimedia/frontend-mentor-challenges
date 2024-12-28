@@ -81,10 +81,6 @@ button {
 button:hover {
   filter: brightness(1.2);
 }
-/* 
-main {
-  margin-block: 96px;
-} */
 
 .section-wrapper {
   gap: 71px;

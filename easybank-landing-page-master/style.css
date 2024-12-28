@@ -40,6 +40,9 @@ h4 {
   letter-spacing: -2%;
   color: var(--dark-blue-color);
 }
+h1 {
+  font-size: 56px;
+}
 h2 {
   font-size: 40px;
 }
@@ -64,10 +67,24 @@ p.font-xs {
 img {
   max-width: 100%;
 }
-
+button {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 14px 32px;
+  border-radius: 100vw;
+  color: var(--white-color);
+  transition: all 0.3s ease-in-out;
+  background: var(--lime-cyan-gradient);
+}
+button:hover {
+  filter: brightness(1.2);
+}
+/* 
 main {
   margin-block: 96px;
-}
+} */
 
 .section-wrapper {
   gap: 71px;
@@ -76,8 +93,23 @@ main {
   position: relative;
   margin-inline: auto;
   padding-block: 108px;
-  flex-direction: column;
   padding-inline: 16px;
+  flex-direction: column;
+}
+
+#hero {
+  display: flex;
+  min-height: 80vh;
+  position: relative;
+  align-items: center;
+}
+
+.hero__content {
+  gap: 28px;
+  width: 100%;
+  display: flex;
+  max-width: 456px;
+  flex-direction: column;
 }
 
 #why-choose-us {

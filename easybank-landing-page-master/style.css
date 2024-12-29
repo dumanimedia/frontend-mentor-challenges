@@ -86,7 +86,6 @@ button:hover {
   gap: 71px;
   display: flex;
   max-width: 1112px;
-  position: relative;
   margin-inline: auto;
   padding-block: 108px;
   padding-inline: 16px;
@@ -95,17 +94,49 @@ button:hover {
 
 #hero {
   display: flex;
-  min-height: 80vh;
+  min-height: 90vh;
   position: relative;
   align-items: center;
+  /* overflow-x: hidden; */
+}
+#hero .section-wrapper {
+  width: 100%;
+  display: flex;
+  padding-block: 0px;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .hero__content {
+  padding-block: 108px;
   gap: 28px;
-  width: 100%;
   display: flex;
   max-width: 456px;
   flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__images {
+  /* position: relative; */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 456px;
+  /* background: rgba(207, 180, 180, 0.643); */
+}
+.hero__images-mockup {
+  display: none;
+}
+.hero__images .hero__images-bg {
+  /* width: 1024px; */
+  height: 120%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  top: -200px;
+  left: 272px;
 }
 
 #why-choose-us {
@@ -176,6 +207,9 @@ button:hover {
 }
 
 @media (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
   h2 {
     font-size: 36px;
   }
@@ -207,6 +241,11 @@ button:hover {
     gap: 36px;
     padding-block: 64px;
     padding-inline: 24px;
+  }
+  .hero__content {
+    gap: 20px;
+    text-align: center;
+    align-items: center;
   }
   .choice {
     justify-content: center;
